@@ -1,420 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lostinframess</title>
-  
-  <!-- Google Fonts: Inter & Playfair Display for premium look -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <style>
-        :root {
-      /* Beige & Black Theme Color Palette */
-      --cream-bg: #F4EEDD;          /* Premium Warm Beige Background */
-      --sage-green: #111111;        /* Black for buttons */
-      --sage-dark: #333333;         /* Dark Gray for hover */
-      --dusty-rose: #111111;       /* Accent Black */
-      --rose-light: #EAE3D2;       /* Light Beige Tint */
-      --card-bg: #FFFDF9;          /* Soft Card Background */
-      --text-main: #1A1A1A;        /* Dark Main Text */
-      --text-muted: #666666;       /* Muted Text */
-      --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.06);
-      --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.1);
-    }
-
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    body {
-      background-color: var(--cream-bg);
-      color: var(--text-main);
-      display: flex;
-      justify-content: center;
-      padding: 30px 15px 50px 15px;
-      min-height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lostinframess</title>
     
-.chrome-hint span.arrow {
-  font-size: 16px;
-  line-height: 1;
-}
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <style>
+        :root {
+            --cream-bg: #F4EEE0;
+            --card-bg: #FFFDF9;
+            --text-dark: #1A1A1A;
+            --text-muted: #666666;
+            --btn-blue: #0088cc;
+            --btn-black: #111111;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-    .container {
-      width: 100%;
-      max-width: 480px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+        body {
+            background-color: var(--cream-bg);
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            padding: 40px 15px 50px 15px;
+            min-height: 100vh;
+        }
 
-    /* Tagline at the very top */
-    .top-tagline {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 13px;
-      letter-spacing: 1px;
-      color: var(--sage-dark);
-      margin-bottom: 24px;
-      text-transform: uppercase;
-      opacity: 0.9;
-    }
+        .container {
+            width: 100%;
+            max-width: 440px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    /* Header Profile Section */
-    .profile-header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 25px;
-      width: 100%;
-    }
+        /* Tagline */
+        .top-tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            text-align: center;
+        }
 
-    .profile-ring {
-      position: relative;
-      padding: 4px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--dusty-rose), var(--sage-green));
-      margin-bottom: 14px;
-      box-shadow: var(--shadow-md);
-    }
+        /* Profile Header */
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }
 
-    .profile-img {
-      width: 105px;
-      height: 105px;
-      border-radius: 50%;
-      background-color: #000;
-      overflow: hidden;
-      border: 3px solid var(--cream-bg);
-    }
+        .profile-ring {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid var(--text-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
 
-    .profile-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+        .profile-ring span {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
 
-    .profile-name {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      color: var(--text-main);
-      margin-bottom: 12px;
-    }
+        .username {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
 
-    .verified-icon {
-      color: var(--sage-green);
-      font-size: 17px;
-    }
+        .verified-icon {
+            color: #111;
+            font-size: 16px;
+        }
 
-    /* Telegram Quick Access Button under profile */
-    .telegram-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      background-color: #0088cc;
-      color: #FFFFFF;
-      padding: 10px 22px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      box-shadow: 0 4px 14px rgba(0, 136, 204, 0.25);
-      transition: all 0.3s ease;
-    }
+        /* Telegram Button */
+        .telegram-btn {
+            background-color: var(--btn-blue);
+            color: white;
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(0, 136, 204, 0.2);
+            margin-bottom: 25px;
+        }
 
-    .telegram-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.35);
-    }
+        /* Category Card */
+        .category-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 20px;
+            width: 100%;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
 
-    /* Banner Button (Movies Link) */
-    .banner-btn {
-      width: 100%;
-      background: var(--card-bg);
-      border: 1px solid rgba(216, 167, 177, 0.3);
-      padding: 16px 22px;
-      border-radius: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-decoration: none;
-      color: var(--text-main);
-      font-weight: 600;
-      font-size: 15px;
-      margin-bottom: 35px;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.3s ease;
-    }
+        .arrow-btn {
+            width: 36px;
+            height: 36px;
+            background: #EBE5D8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .banner-btn:hover {
-      transform: translateY(-2px);
-      border-color: var(--dusty-rose);
-      box-shadow: var(--shadow-md);
-    }
+        /* Section Titles */
+        .section-title {
+            width: 100%;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            text-align: left;
+        }
 
-    .banner-btn .icon-box {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: var(--rose-light);
-      color: var(--dusty-rose);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-    }
+        /* Products Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
 
-    /* Section Styling */
-    .section-title {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      margin-bottom: 18px;
-      color: var(--sage-dark);
-      text-transform: uppercase;
-      width: 100%;
-      text-align: left;
-      padding-left: 5px;
-    }
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
 
-    /* Product Grid Layout */
-    .product-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      width: 100%;
-      margin-bottom: 35px;
-    }
+        .product-img {
+            width: 100%;
+            height: 130px;
+            background: #EAE6DF;
+            border-radius: 14px;
+            margin-bottom: 12px;
+            object-fit: cover;
+        }
 
-    .card {
-      background: var(--card-bg);
-      border-radius: 22px;
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid rgba(138, 154, 134, 0.15);
-      transition: all 0.3s ease;
-    }
+        .product-title {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            min-height: 34px;
+            display: flex;
+            align-items: center;
+        }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
-    }
+        .buy-btn {
+            background: var(--btn-black);
+            color: white;
+            text-decoration: none;
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
 
-    .card-img {
-      width: 100%;
-      height: 145px;
-      background: #F0F2F0;
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 12px;
-    }
+        /* Divider & Socials */
+        hr {
+            width: 100%;
+            border: none;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            margin: 20px 0 30px 0;
+        }
 
-    .card-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+        .connect-title {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
 
-    .card-title {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 14px;
-      text-align: center;
-      color: var(--text-main);
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      height: 36px;
-    }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
 
-    .view-btn {
-      width: 100%;
-      background-color: var(--sage-green);
-      border: none;
-      padding: 10px 0;
-      border-radius: 14px;
-      color: #FFFFFF;
-      font-weight: 600;
-      text-align: center;
-      text-decoration: none;
-      font-size: 13px;
-      letter-spacing: 0.3px;
-      transition: background-color 0.3s ease;
-    }
+        .social-icon {
+            width: 44px;
+            height: 44px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
 
-    .view-btn:hover {
-      background-color: var(--sage-dark);
-    }
-
-    /* Footer Social Links (At the bottom) */
-    .footer-section {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 15px;
-      padding-top: 25px;
-      border-top: 1px solid rgba(138, 154, 134, 0.2);
-    }
-
-    .footer-title {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
-
-    .footer-social-links {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-
-    .footer-social-links a {
-      color: var(--text-main);
-      background: var(--card-bg);
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 18px;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid rgba(216, 167, 177, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    .footer-social-links a:hover {
-      transform: translateY(-3px);
-      background-color: var(--dusty-rose);
-      color: #FFFFFF;
-      border-color: var(--dusty-rose);
-    }
-
-    .copyright {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-  </style>
+        footer {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-   
-    <!-- Top Aesthetic Tagline -->
-    <div class="top-tagline">Every frame tells a story</div>
+<div class="container">
+    
+    <div class="top-tagline">EVERY FRAME TELLS A STORY</div>
 
-    <!-- Profile Info Section -->
     <div class="profile-header">
-      <div class="profile-ring">
-        <div class="profile-img">
-          <!-- Profile Logo -->
-          <img src="profile.jpg" alt="Lostinframess">
+        <div class="profile-ring">
+            <span>LF</span>
         </div>
-      </div>
-
-      <div class="profile-name">
-        LOSTINFRAMESS
-        <i class="fa-solid fa-circle-check verified-icon"></i>
-      </div>
-
-      <!-- Telegram Button -->
-      <a href="https://t.me/+3kTkrImUkY9mOTY9" target="_blank" class="telegram-btn">
-        <i class="fa-brands fa-telegram"></i> Join Telegram Channel
-      </a>
+        <div class="username">
+            LOSTINFRAMESS <i class="fa-solid fa-circle-check verified-icon"></i>
+        </div>
+        <a href="https://t.me/" class="telegram-btn" target="_blank">
+            <i class="fa-paper-plane fa-telegram"></i> Join Telegram Channel
+        </a>
     </div>
 
-    <!-- Movies Link Button -->
-    <a href="https://t.me/+3kTkrImUkY9mOTY9" class="banner-btn">
-      <span>Movies</span>
-      <div class="icon-box">
-        <i class="fa-solid fa-arrow-right"></i>
-      </div>
+    <a href="#" class="category-card">
+        <span>Movies</span>
+        <div class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></div>
     </a>
-<!-- Main Heading -->
-<h2 style="font-size: 16px; font-weight: 700; color: #111111; text-transform: uppercase; letter-spacing: 1px; width: 100%; text-align: left; padding-left: 5px; margin-bottom: 12px;">MY FINDINGS</h2>
 
-
-    <!-- My Findings Section -->
-    <div class="section-title">My Findings</div>
-    <div class="product-grid">
-      <!-- Product 1 -->
-      <div class="card">
-        <div class="card-img">
-          <img src="https://via.placeholder.com/300" alt="Monitor">
+    <div class="section-title">MY FINDINGS</div>
+    <div class="grid">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Monitor" class="product-img">
+            <div class="product-title">200Hz Gaming Monitor</div>
+            <a href="#" class="buy-btn">View Product</a>
         </div>
-        <div class="card-title">200Hz Gaming Monitor</div>
-        <a href="#" class="view-btn">View Product</a>
-      </div>
-
-      <!-- Product 2 -->
-      <div class="card">
-        <div class="card-img">
-          <img src="https://via.placeholder.com/300" alt="Monitor Light">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Screenbar Light" class="product-img">
+            <div class="product-title">Screenbar Monitor Light</div>
+            <a href="#" class="buy-btn">View Product</a>
         </div>
-        <div class="card-title">Screenbar Monitor Light</div>
-        <a href="#" class="view-btn">View Product</a>
-      </div>
     </div>
 
-    <!-- Audio Gear Section -->
-    <div class="section-title">Audio Gear</div>
-    <div class="product-grid">
-      <!-- Product 3 -->
-      <div class="card">
-        <div class="card-img">
-          <img src="https://via.placeholder.com/300" alt="IEM Earphones">
+    <div class="section-title">AUDIO GEAR</div>
+    <div class="grid">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="IEM Earphones" class="product-img">
+            <div class="product-title">Aesthetic IEM Earphones</div>
+            <a href="#" class="buy-btn">View Product</a>
         </div>
-        <div class="card-title">Aesthetic IEM Earphones</div>
-        <a href="#" class="view-btn">View Product</a>
-      </div>
     </div>
 
-    <!-- Bottom Footer Section (Social Links) -->
-    <div class="footer-section">
-      <div class="footer-title">Connect With Me</div>
-      <div class="footer-social-links">
-        <!-- Instagram Link -->
-        <a href="https://instagram.com/lostinframess___" target="_blank" title="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <!-- YouTube Link -->
-        <a href="https://youtube.com" target="_blank" title="YouTube">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-        <!-- Email Link -->
-        <a href="mailto:lostinframess01@gmail.com" title="Email">
-          <i class="fa-regular fa-envelope"></i>
-        </a>
-      </div>
-      <div class="copyright">© Lostinframess. All Rights Reserved.</div>
+    <hr>
+
+    <div class="connect-title">CONNECT WITH ME</div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/lostinframess___/" class="social-icon" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://youtube.com/@lostinframess" class="social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="mailto:contact@lostinframess.com" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
     </div>
 
-  </div>
+    <footer>© Lostinframess. All Rights Reserved.</footer>
+
+</div>
 
 </body>
 </html>
-
